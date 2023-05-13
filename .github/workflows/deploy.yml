@@ -14,7 +14,9 @@ jobs:
       - name: Generate slides
         run:  mdslides ./slides/kafka-101.md --output_dir .
       - name: Checkout to slides branch
-        run: git checkout slides
+        run: |
+          git pull
+          git checkout slides
       - name: Delete unused files
         run: |
           rm -r .github
