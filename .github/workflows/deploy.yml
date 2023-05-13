@@ -17,6 +17,8 @@ jobs:
         run: git checkout -b slides
       - name: Push all code to slides branch
         run: |
+          git config --global user.email "26169430+KingChampion36@users.noreply.github.com"
+          git config --global user.name "KingChampion36"
           git add .
           git commit -m "Slides generated"
           git push --force origin slides
