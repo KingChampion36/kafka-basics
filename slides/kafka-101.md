@@ -1,6 +1,4 @@
-Rahul Nag | SDE-2, EGSP | Feb 25, 2023
-
-# Kafka 101 - Hands On
+#### Kafka 101 - Hands On
 
 [comment]: # (A comment starting with three or more !!! marks a slide break.)
 [comment]: # (!!!)
