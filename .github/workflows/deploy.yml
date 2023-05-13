@@ -12,9 +12,15 @@ jobs:
       - name: Install mdslides
         run: python -m pip install git+https://gitlab.com/da_doomer/markdown-slides.git
       - name: Generate slides
-        run:  mdslides ./slides/kafka-101.md --output_dir docs
+        run:  mdslides ./slides/kafka-101.md --output_dir .
       - name: Checkout to slides branch
         run: git checkout -b slides
+      - name: Delete unused files
+        run: |
+          rm -r .github
+          rm -r slides
+          rm README.md
+          rm .gitignore
       - name: Push all code to slides branch
         run: |
           git config --global user.email "26169430+KingChampion36@users.noreply.github.com"
