@@ -12,7 +12,7 @@ jobs:
       - name: Install mdslides
         run: python -m pip install git+https://gitlab.com/da_doomer/markdown-slides.git
       - name: Generate slides
-        run:  mdslides ./slides/kafka-101.md --output_dir .
+        run:  mdslides ./slides/kafka-101.md --output_dir docs
       - name: Checkout to slides branch
         run: |
           git pull
