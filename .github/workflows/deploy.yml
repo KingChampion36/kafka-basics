@@ -16,5 +16,8 @@ jobs:
       - name: Checkout to slides branch
         run: git checkout -b slides
       - name: Push all code to slides branch
-        run: git push --force origin slides
+        run: |
+          git add .
+          git commit -m "Slides generated"
+          git push --force origin slides
   
